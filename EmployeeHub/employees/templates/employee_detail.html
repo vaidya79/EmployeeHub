@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+
+{% block title %} employee_detail {% endblock %}
+
+{% block content %}
+
+
+<h1> Details of {{mymember.firstname}} {{mymember.lastname}}</h1>
+<p>Phone-no : {{mymember.Phone}}</p>
+<p>Joined Date : {{mymember.Joined}}</p>
+<p>Departement : {{mymember.Departement}}</p>
+
+<p>Back to<a href="{% url 'EmployeeListView' %}"> Menu</a></p>
+   
+{% endblock %}

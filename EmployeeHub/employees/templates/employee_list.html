@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+
+{% block title %}Employee List {% endblock %}
+    
+{% block content %}
+<p><a href="/">Home</a></p>
+<h1>Employee List</h1>
+<ol>
+    {% for x in member %}
+    <li><a href="{% url 'EmployeeDetailView' x.id %}">{{x.firstname}} {{x.lastname}}</a></li>
+    {% endfor %}
+</ol>
+
+    
+{% endblock %}
